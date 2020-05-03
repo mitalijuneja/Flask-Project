@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--specifies title of the page !-->
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+        <title>Mitali Juneja - Page1</title>
+    <head>
+    <body>
+    <h1>Stock Visualizer</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/1006">PAGE 1</a>
+            </li>
+            <li>
+                <a href="/miku">PAGE 2</a>
+            </li>
+    </nav>
+    <p><img src="static/stock_plot.png" alt="Stock Chart"> stock chart for {{stats["symbol"]}}</p>
+    <ul>
+        <li>
+            <p>purchase date: {{stats["date"]}}</p>
+        </li>
+        <li>
+            <p>purchase day close: {{stats["purchase close"]}}</p>
+        </li>
+        <li>
+            <p>last close: {{stats["last close"]}}</p>
+        </li>
+        <li>
+            <p>change since purchase: {{stats["change"]}} ({{stats["percent"]}}%)</p>
+        </li>
+        <li>
+            <p>maximum close since purchase: {{stats["max close"]}} on {{stats["max date"]}}</p>
+        </li>
+        <li>
+            <p>maximum possible upside since purchase: {{stats["max change"]}} ({{stats["max percent"]}}%)</p>
+        </li>    
+    </body>
+</html>
+
