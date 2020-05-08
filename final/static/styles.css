@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Poiret+One&display=swap');
+
 body {
-    font-family:'Poiret One';
+    font-family:'Assistant';
     background-color: #ffffff;
-    
 }
-
-
 h1 {
     text-align:center;
     font-size: 70px;
@@ -13,13 +11,56 @@ h1 {
     color:#14213d;
     font-family:'Poiret One';
 }
+.weather{
+    font-size:20px;
+    letter-spacing: 0.2em;
+    color:#ffffff;
+    background-color:#ffffff;
+}
+h3 {
+    text-align:center;
+    font-family:'Assistant';
+    font-size:20px;
+}
+h6 {
+    text-align:center;
+    font-family:'Assistant';
+    font-size: 15px;
+}
 p {
     font-family:'Assistant';
+    
 }
+
+.weather {
+    text-align:center;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    background-color:transparent;
+    font-color:#ffffff;
+}
+
+    
 img {
+    margin: 1em;
+}
+.weather {
+    margin: 0em;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.me {
     width: 30%;
     float:left;
-    border-radius: 100%;
+    border-radius:100%;
+}
+.chart {
+    width: 70%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 li {
@@ -44,16 +85,37 @@ nav li {
     margin:0;
 }
 
-nav a{
+nav a {
     margin-right: 6em;
     text-decoration:none;
 }
-nav a:visited{
+.active {
+    background-color:#fca311;
+}
+nav a:visited {
     margin-right: 6em;
     color:#ffffff;
     text-decoration:none;
 }
-nav a:hover{
-    background-color:#fca311;
+nav a:hover {
+    background-color:#f7b952;
     text-decoration:none;
+}
+input[type=submit] {
+    background-color:#14213d;
+    border:none;
+    color:#ffffff;
+    padding: 8px 10px;
+    margin: 10px 2px;
+    font-size:15px;
+}
+input[type=submit]:hover {
+    background-color:#fca311;
+}
+form {
+    width:70%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:20px;
 }

@@ -55,14 +55,20 @@ def calc_stats(data, dt):
     
 def format_date(dt):
    dt_el = dt.split("-")
-   return datetime.datetime(int(dt_el[0]), int(dt_el[1]),int(dt_el[2]))
+   date = datetime.datetime(int(dt_el[0]), int(dt_el[1]),int(dt_el[2]))
+   # make Saturdays into Fridays
+   if date.weekday() == 5:
+       date = date - datetime.timedelta(days=1)
+   # make Sundays into Mondays
+   if date.weekday() == 6:
+       date = date + datetime.timedelta(days=1)
+   return date
 
 def plot_data(data, dt, symb):
     figure(num=None, figsize=(15,6), dpi=100, facecolor='w', edgecolor='k')
     data['4. close'].plot(color='#14213d', label="{} close".format(symb.upper()))
     plt.tight_layout()
     plt.grid()
-    #check if it contains the purchase date otherwise move around days
     purch_close=data.loc[dt]['4. close']
     plt.axhline(y=purch_close, color='#fca311', linestyle='dashed', label='purchase price')
     plt.axvline(x=dt, color='#fca311', linestyle='dashed', label='purchase date')
@@ -70,6 +76,3 @@ def plot_data(data, dt, symb):
     plt.savefig(fname='static/stock_plot.png')
 
 
-data, date = get_data('AAPL', "2019-05-03")
-print(calc_stats(data, date))
-plot_data(data, date, 'aapl')

@@ -3,7 +3,7 @@
     <head>
         <!--specifies title of the page !-->
         <link rel="stylesheet" type="text/css" href="static/styles.css">
-        <title>Mitali Juneja - Page1</title>
+        <title>Stock Visualizer | Mitali Juneja</title>
     <head>
     <body>
     <h1>Stock Visualizer</h1>
@@ -13,13 +13,13 @@
                 <a href="/">HOME</a>
             </li>
             <li>
-                <a href="/1006">PAGE 1</a>
+                <a href="/stock-visualizer" class="active">STOCK VISUALIZER</a>
             </li>
             <li>
-                <a href="/miku">PAGE 2</a>
+                <a href="/weather">WEATHER</a>
             </li>
     </nav>
-    <p><img src="static/stock_plot.png" alt="Stock Chart"> stock chart for {{stats["symbol"]}}</p>
+    <h6><img src="static/stock_plot.png" alt="Stock Chart" class="chart"> stock chart for {{stats["symbol"]}}</h6>
     <ul>
         <li>
             <p>purchase date: {{stats["date"]}}</p>
