@@ -1,0 +1,35 @@
+<!--Mitali Juneja (mj2944) !-->
+<!--Final assignment = asks for stock information for !-->
+<!--use in stock visualizer !-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+        <title>Stock Visualizer | Mitali Juneja</title>
+    <head>
+    <body>
+    <h1>Stock Visualizer</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/stock-visualizer" class="active">STOCK VISUALIZER</a>
+            </li>
+            <li>
+                <a href="/weather">WEATHER</a>
+            </li>
+    </nav>
+    <h3>Retrieve some information about the closing price of a stock</h3>
+    <h6>To begin enter a stock symbol and the purchase date</h6>
+    <form method="POST">
+        <label for="symbol">Symbol:</label>
+        <input name="symbol">
+         <label for="purchase_date">Purchase Date:</label>
+        <input type="date" id="purchase_date" name="purchase_date">
+        <input type="submit" value="SUBMIT">
+    </form>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!--Mitali Juneja (mj2944) !-->
+<!--Final assignment = display stock information and plot on page !-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+        <title>Stock Visualizer | Mitali Juneja</title>
+    <head>
+    <body>
+    <h1>Stock Visualizer</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/stock-visualizer" class="active">STOCK VISUALIZER</a>
+            </li>
+            <li>
+                <a href="/weather">WEATHER</a>
+            </li>
+    </nav>
+    <h6><img src="static/stock_plot.png" alt="Stock Chart" class="chart"> stock chart for {{stats["symbol"]}}</h6>
+    <ul>
+        <li>
+            <p>purchase date: {{stats["date"]}}</p>
+        </li>
+        <li>
+            <p>purchase day close: {{stats["purchase close"]}}</p>
+        </li>
+        <li>
+            <p>last close: {{stats["last close"]}}</p>
+        </li>
+        <li>
+            <p>change since purchase: {{stats["change"]}} ({{stats["percent"]}}%)</p>
+        </li>
+        <li>
+            <p>maximum close since purchase: {{stats["max close"]}} on {{stats["max date"]}}</p>
+        </li>
+        <li>
+            <p>maximum possible upside since purchase: {{stats["max change"]}} ({{stats["max percent"]}}%)</p>
+        </li>    
+    </body>
+</html>
+
